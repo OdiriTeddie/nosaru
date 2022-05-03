@@ -69,8 +69,27 @@ button {
 
 .section-title {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
     margin-bottom: 3rem;
 }
+
+.section-title img {
+    width: 10rem;
+}
+
+/* .section-title::after {
+    position: absolute;
+    content: '';
+    width: 7rem;
+    height: 2rem;
+    background-image: url('./images/Line.png');
+} */
+
+
 
 
 /********************* Header ****************/
@@ -320,11 +339,18 @@ button {
     
 }
 
+.venue-section .container {
+    flex-direction: column-reverse;
+}
+
 .venue__content,
 .reception__content {
     text-align: center;
     --gap: 2rem;
+    margin-inline: auto;
 }
+
+
 
 .venue__img,
 .reception__img {
@@ -339,6 +365,13 @@ button {
     background: linear-gradient(181.13deg, #FEFCFE 0.96%, #F8E6FF 94.86%);
 }
 
+.wedding-crew .container {
+    align-items: center;
+}
+
+.wedding-flower {
+    display: none;
+}
 
 /************ Organising Section ***********/
 
@@ -403,6 +436,12 @@ button {
         margin-left: 10rem;
     }
 
+    /********** Our Story  *************/
+
+    .our-story__img {
+        justify-content: center;
+        align-items: center;
+    }
 
     .our-story__images {
         flex-direction: row;
@@ -434,12 +473,6 @@ button {
 
     /********* Meet Section *************/
 
-    /* .meet__bride,
-    .meet__groom {
-        flex-direction: row;
-        align-items: center;
-    } */
-
     .meet__bride,
     .meet__groom {
         display: grid;
@@ -448,17 +481,6 @@ button {
         justify-content: space-between;
         gap: 2rem;
     }
-
-    /* .meet__bride-img,
-    .meet__bride-content,
-    .meet__groom-img,
-    .meet__groom-content {
-        width: 100%;
-    } */
-
-
-
-
   
     /******** Donate Section ***********/
 
@@ -492,6 +514,9 @@ button {
         gap: 2rem;
     }
 
+    .wedding-flower {
+        display: block;
+    }
 
     /* Organising Crew */
 
