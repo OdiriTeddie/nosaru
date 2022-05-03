@@ -72,15 +72,12 @@ button {
     margin-bottom: 3rem;
 }
 
-.section-title::after {
-
-}
 
 /********************* Header ****************/
 
 .header {
     height: 100vh;
-    background-image: url("./images/slider.jpg");
+    background-image: url("./images/Slider.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center ;
