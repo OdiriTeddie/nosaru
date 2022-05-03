@@ -201,7 +201,6 @@ button {
 
 .our-story__img {
     margin-top: 5rem;
-    outline: 1px solid red;
 }
 
 .our-story__arrow {
@@ -435,18 +434,30 @@ button {
 
     /********* Meet Section *************/
 
-    .meet__bride,
+    /* .meet__bride,
     .meet__groom {
         flex-direction: row;
         align-items: center;
+    } */
+
+    .meet__bride,
+    .meet__groom {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
     }
 
-    .meet__bride-img,
+    /* .meet__bride-img,
     .meet__bride-content,
     .meet__groom-img,
     .meet__groom-content {
         width: 100%;
-    }
+    } */
+
+
+
 
   
     /******** Donate Section ***********/
