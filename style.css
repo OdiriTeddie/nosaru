@@ -367,6 +367,12 @@ button {
 
 .wedding-crew .container {
     align-items: center;
+    text-align: center;
+}
+
+.wedding-crew span {
+    display: block;
+    font-weight: bold;
 }
 
 .wedding-flower {
@@ -404,6 +410,15 @@ button {
     background-color: #fff;
 }
 
+.memories-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-inline: center;
+}
+
 .toast {
     background-color:  #F0E4F3;
 
@@ -416,6 +431,16 @@ button {
     text-align: center;
 }
 
+.toast h2 {
+    font-family: 'Sacramento', cursive;
+    font-size: 2rem;
+}
+
+.toast p {
+    max-width: 30rem;
+    width: 100%;
+}
+
 
 .footer {
     background-color: #B0152E;
@@ -425,7 +450,8 @@ button {
 .footer .container {
     padding-block: 2rem;
     color: #fff;
-    
+    justify-content: center;
+    text-align: center;
     align-items: center;
 }
 
@@ -531,9 +557,8 @@ button {
     /* Memories */
 
     .memories-list {
-        display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
+
     }
 
 
