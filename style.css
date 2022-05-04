@@ -6,11 +6,12 @@
     padding: 0;
 }
 
-body {
+html, body {
     line-height: 1.5;
     font-family: 'Nunito', sans-serif;
     color: #000;
     background: #FAF0F0;
+    scroll-behavior: smooth;
 }
 
 h1, h2, h3 {
@@ -81,16 +82,6 @@ button {
     width: 10rem;
 }
 
-/* .section-title::after {
-    position: absolute;
-    content: '';
-    width: 7rem;
-    height: 2rem;
-    background-image: url('./images/Line.png');
-} */
-
-
-
 
 /********************* Header ****************/
 
@@ -123,6 +114,7 @@ button {
     width: 100%;
     background: rgba(218, 218, 223, 0.76);
     box-shadow: 4px 19px 36px -33px rgba(0, 0, 0, 0.25);
+    z-index: 10000;
 }
 
 .primary-navigation {
@@ -346,7 +338,6 @@ button {
 .venue__content,
 .reception__content {
     text-align: center;
-    --gap: 2rem;
     margin-inline: auto;
 }
 
