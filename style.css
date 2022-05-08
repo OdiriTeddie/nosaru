@@ -10,7 +10,7 @@ html, body {
     line-height: 1.5;
     font-family: 'Nunito', sans-serif;
     color: #000;
-    background: #FAF0F0;
+    background: #fff;
     scroll-behavior: smooth;
 }
 
@@ -220,17 +220,22 @@ button {
     padding-block: 2rem;
 }
 
+/* Yes Section */
+
 .yes {
     padding-block: 2rem;
     justify-content: center;
     align-items: center;
     margin-inline: auto;
+    flex-direction: column-reverse;
 }
 
 .yes__content {
     background-color: #fff;
     max-width: 40rem;
     width: 100%;
+    flex-direction: column-reverse;
+    gap: 0;
 }
 
 .yes__quote {
@@ -247,6 +252,7 @@ button {
 .yes__content-main {
     padding-inline: 5rem;
     padding-block: 3rem;
+    text-align: center;
 }
 
 .yes__img {
@@ -263,6 +269,7 @@ button {
 
  .meet {
      padding-block: 2rem;
+     background-color:   #FAF0F0;
  }
 
  .meet__header {
@@ -328,7 +335,11 @@ button {
 .reception-section {
     padding-block: 2rem;
     background-color: #fff;
-    
+    background-color: rgba(115, 170, 215, 0.19);
+}
+
+.venue-section {
+    margin-bottom: 3rem;
 }
 
 .venue-section .container {
@@ -345,7 +356,7 @@ button {
 
 .venue__img,
 .reception__img {
-    border: 2rem solid #73AAD730;
+    border: none;
 
 }
 
@@ -407,7 +418,10 @@ button {
     gap: 2rem;
     justify-content: center;
     align-items: center;
-    margin-inline: center;
+}
+
+.memories-list > div {
+    margin-inline: auto;
 }
 
 .toast {
@@ -481,6 +495,15 @@ button {
        
     }
 
+    .yes__content-main {
+        text-align: left;
+    }
+
+    .yes__content  {
+        flex-direction: column;
+        gap: 0;
+    }
+
     .yes__img {
        width: 25rem;
        height: 18rem;
@@ -520,7 +543,21 @@ button {
         justify-content: space-between;
     }
 
+    .venue-section,
+.reception-section {
+    padding-block: 2rem;
+    background-color: #fff;
+}
 
+.venue-section {
+    margin-bottom: 0;
+}
+
+    .venue__img,
+    .reception__img {
+    border: 2rem solid #73AAD730;
+
+}
 
     /* Wedding Crew */
 
