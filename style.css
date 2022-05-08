@@ -460,6 +460,13 @@ button {
     align-items: center;
 }
 
+.footer p {
+    font-size: 0.95rem;
+}
+
+.footer a {
+    text-decoration: underline;
+}
 
 @media(min-width: 50em) {
 
