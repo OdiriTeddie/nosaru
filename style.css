@@ -9,10 +9,13 @@
 html, body {
     line-height: 1.5;
     font-family: 'Nunito', sans-serif;
+    font-style: normal;
     color: #000;
     background: #fff;
     scroll-behavior: smooth;
 }
+
+
 
 h1, h2, h3 {
     line-height: 1.1;
@@ -51,6 +54,7 @@ button {
     max-width: 75rem;
     padding-inline: 2rem;
     margin-inline: auto;
+    font-style: normal;
 }
 
 .flex {
@@ -76,6 +80,11 @@ button {
     align-items: center;
     gap: 1rem;
     margin-bottom: 3rem;
+}
+
+.section-title h2 {
+    font-weight: 400;
+    font-style: normal;
 }
 
 .section-title img {
@@ -154,7 +163,7 @@ button {
 
 .hero-content .container {
     --gap: 2rem;
-    padding-top: 10rem;
+    padding-top: 7rem;
 }
 
 .hero-names {
@@ -220,6 +229,10 @@ button {
     padding-block: 2rem;
 }
 
+.our-story__videosmall {
+    flex-direction: row;
+}
+
 /* Yes Section */
 
 .yes {
@@ -243,6 +256,12 @@ button {
     font-size: 0.85rem;
     font-style: italic;
     font-weight: 300;
+}
+
+.yes__title {
+    --gap: 0.5rem;
+    text-transform: uppercase;
+    font-weight: normal;
 }
 
 .flower {
@@ -270,6 +289,12 @@ button {
  .meet {
      padding-block: 2rem;
      background-color:   #FAF0F0;
+
+    background-image: url('../images/big-flower.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left center;
+
  }
 
  .meet__header {
@@ -297,6 +322,7 @@ button {
 .donate-section {
     background-color: #fff;
     padding-block: 6rem;
+    font-style: normal;
 }
 
 .donate {
@@ -319,6 +345,7 @@ button {
 
 .donate-details {
     margin-top: 5rem;
+    gap: 2rem;
 }
 
 .donate__option {
@@ -378,7 +405,9 @@ button {
 }
 
 .wedding-flower {
-    display: none;
+    position: absolute;
+    right: 0;
+    opacity: 0.2;
 }
 
 /************ Organising Section ***********/
@@ -389,8 +418,8 @@ button {
 
     background-image: url("./images/flower4.png");
     background-repeat: no-repeat;
-    background-position: 120px 0;
-    background-size: 60%;
+    background-position: center center;
+    background-size: contain;
 }
 
 .organising-crew .container {
@@ -426,11 +455,14 @@ button {
 
 .toast {
     background-color:  #F0E4F3;
-
+    background-image: url('./images/flower6.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
 }
 
 .toast .container {
-    padding-block: 10rem;
+    padding-block: 7rem;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -494,6 +526,7 @@ button {
 
     .our-story__videosmall {
         width: 30%;
+        flex-direction: column;
     }
 
     .yes {
@@ -504,6 +537,15 @@ button {
 
     .yes__content-main {
         text-align: left;
+    }
+
+    .yes__quote {
+        margin-left: 1.2rem;
+    }
+
+    .yes__content-main p:last-child {
+        align-self: center;
+        font-size: 0.8rem;
     }
 
     .yes__content  {
@@ -551,14 +593,14 @@ button {
     }
 
     .venue-section,
-.reception-section {
-    padding-block: 2rem;
-    background-color: #fff;
-}
+    .reception-section {
+        padding-block: 2rem;
+        background-color: #fff;
+    }
 
-.venue-section {
-    margin-bottom: 0;
-}
+    .venue-section {
+        margin-bottom: 0;
+    }
 
     .venue__img,
     .reception__img {
@@ -577,9 +619,16 @@ button {
 
     .wedding-flower {
         display: block;
+        position: static;
+        opacity: 1;
     }
 
     /* Organising Crew */
+
+    .organising-crew {
+        background-position: 120px 0;
+        background-size: 60%;
+    }
 
     .organising-list {
         display: grid;
@@ -596,7 +645,13 @@ button {
 
     }
 
+    /* Toast Section */
 
-
+    .toast {
+        background-image: url('./images/flower5.png');
+        background-repeat: no-repeat;
+        background-position: 10px 50px;
+        background-size: cover;
+    }
 
 }
