@@ -365,6 +365,12 @@ button {
   flex-direction: row;
 }
 
+
+.small-pic {
+  width: 204px;
+  height: 170px;
+  object-fit: cover;
+}
 /* Yes Section */
 
 .yes {
@@ -659,6 +665,10 @@ button {
   .our-story__videosmall {
     width: 30%;
     flex-direction: column;
+  }
+
+  .small-pic {
+    height: 210px;
   }
 
   .yes {
