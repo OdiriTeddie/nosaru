@@ -1,6 +1,7 @@
 const playBtn = document.querySelector('.play-btn')
 const popVideo = document.querySelector('.pop-video')
 const closeBtn = document.querySelector('.pop-video span')
+const video = document.querySelector('video')
 
 
 
@@ -11,6 +12,7 @@ function toggleVideo() {
 function closeVideo(e) {
    if(e.target === popVideo || e.target === closeBtn) {
        popVideo.style.display = 'none'
+       video.setAttribute("muted", "") 
    }
 }
 
