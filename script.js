@@ -7,12 +7,13 @@ const video = document.querySelector('video')
 
 function toggleVideo() {
     popVideo.style.display = 'block'
+    video.setAttribute('src', './images/Engagement -1.m4v') 
 }
 
 function closeVideo(e) {
    if(e.target === popVideo || e.target === closeBtn) {
        popVideo.style.display = 'none'
-       video.setAttribute("muted", "") 
+       video.setAttribute('src', '') 
    }
 }
 
