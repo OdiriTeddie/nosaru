@@ -227,6 +227,14 @@ button {
   font-size: 1.125rem;
 }
 
+.our-story__images {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+}
+
 .our-story__img {
   margin-top: 5rem;
 }
@@ -235,6 +243,122 @@ button {
   display: flex;
   justify-content: center;
   padding-block: 2rem;
+}
+
+.our-story__video {
+  width: min(100%, 800px);
+  height: 450px;
+  background-image: url("./images/our-story-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f60;
+  color: #fff;
+  font-size: 4rem;
+  width: 6.25rem;
+  height: 6.25rem;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.play-btn:before {
+  content: '';
+  position: absolute;
+  border: 15px solid #fff;
+  border-radius: 50%;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  animation: bloom1 1.5s linear infinite;
+  opacity: 0;
+  z-index: 1;
+}
+
+.play-btn:after {
+  content: '';
+  position: absolute;
+  border: 15px solid #fff;
+  border-radius: 50%;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  animation: bloom2 1.5s linear infinite;
+  opacity: 0;
+  z-index: 1;
+  animation-delay: .4s;
+}
+
+
+.pop-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(0,0,0,.85);
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+.pop-video video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px;
+  border: 3px solid #fff;
+  object-fit: cover;
+  width: 95%;
+}
+
+.pop-video span {
+  position: absolute;
+  top: 5px; 
+  right: 20px;
+  color: #fff;
+  z-index: 100;
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: 3rem;
+}
+
+@keyframes bloom1 
+{
+  0% {
+    transform: scale(.5)
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: (1.5);
+  }
+}
+
+@keyframes bloom2 
+{
+  0% {
+    transform: scale(.5)
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: (1.5);
+  }
 }
 
 .our-story__videosmall {
@@ -524,15 +648,20 @@ button {
   }
 
   .our-story__images {
+    width: 80%;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
-  .our-story__video {
+  /* .our-story__video {
     width: 60%;
-  }
+  } */
+
+.pop-video video {
+  width: 700px;
+}
 
   .our-story__videosmall {
     width: 30%;
