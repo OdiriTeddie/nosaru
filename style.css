@@ -1,657 +1,651 @@
-*, 
+*,
 *::after,
 *::before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-html, body {
-    line-height: 1.5;
-    font-family: 'Nunito', sans-serif;
-    font-style: normal;
-    color: #000;
-    background: #fff;
-    scroll-behavior: smooth;
+html,
+body {
+  line-height: 1.5;
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  color: #000;
+  background: #fff;
+  scroll-behavior: smooth;
 }
 
-
-
-h1, h2, h3 {
-    line-height: 1.1;
-    font-family: 'Libre Baskerville', serif;
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+  font-family: "Libre Baskerville", serif;
 }
 
 ul[role="list"] {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
-    color: unset;
+  text-decoration: none;
+  color: unset;
 }
 
 img,
 picture,
 video {
-    max-width: 100%;
-    display: block;
-    height: auto;
+  max-width: 100%;
+  display: block;
+  height: auto;
 }
 
-input, 
+input,
 textarea,
 select,
 button {
-    color: unset;
-    font: unset;
+  color: unset;
+  font: unset;
 }
-
 
 /* Utilites */
 
 .container {
-    max-width: 75rem;
-    padding-inline: 2rem;
-    margin-inline: auto;
-    font-style: normal;
+  max-width: 75rem;
+  padding-inline: 2rem;
+  margin-inline: auto;
+  font-style: normal;
 }
 
 .flex {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap, 1rem);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap, 1rem);
 }
 
 .btn {
-    display: inline-block;
-    padding: 0.65em 2.5em;
-    background-color: #B0152E;
-    font-size: 1rem;
-    color:  #fff;
+  display: inline-block;
+  padding: 0.65em 2.5em;
+  background-color: #b0152e;
+  font-size: 1rem;
+  color: #fff;
 }
 
-
 .section-title {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
 }
 
 .section-title h2 {
-    font-weight: 400;
-    font-style: normal;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .section-title img {
-    width: 10rem;
+  width: 10rem;
 }
-
 
 /********************* Header ****************/
 
 .header {
-    height: 100vh;
-    background-image: url("./images/Slider.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center ;
-    position: relative;
-
+  height: 100vh;
+  background-image: url("./images/Slider.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
 }
 
 .header::after {
-    position: absolute; 
-    content: '';
-    background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(46, 36, 103, 0.69) 98.96%);
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
+  position: absolute;
+  content: "";
+  background: linear-gradient(
+    180deg,
+    rgba(196, 196, 196, 0) 0%,
+    rgba(46, 36, 103, 0.69) 98.96%
+  );
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
 
-    z-index: 1;
+  z-index: 1;
 }
 
 /* Navigation */
 
 .main-nav {
-    padding-block: 2rem;
-    width: 100%;
-    background: rgba(218, 218, 223, 0.76);
-    box-shadow: 4px 19px 36px -33px rgba(0, 0, 0, 0.25);
-    z-index: 10000;
+  padding-block: 2rem;
+  width: 100%;
+  background: rgba(218, 218, 223, 0.76);
+  box-shadow: 4px 19px 36px -33px rgba(0, 0, 0, 0.25);
+  z-index: 10000;
 }
 
 .primary-navigation {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  overflow-x: auto;
 }
 
-@media(max-width: 768px) {
-    .main-nav {
-        position: absolute;
-        top: 50px;
-        z-index: 100;
-        background: #fff;
-        display: none;
-    }
+@media (max-width: 768px) {
+  .main-nav {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+    display: none;
+  }
 
-    .primary-navigation {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
+  .primary-navigation {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding-inline: 2rem;
+  }
+
+  *.primary-navigation > * {
+    width: 100%;
+    text-align: center;
+    border-bottom: 0.5px dotted rgba(35, 35, 35, 0.5);
+  }
 }
 
 /* Hero-content */
 
 .hero-content {
-    /* margin-top: auto; */
-    height: 100%;
-    text-align: center;
-    justify-content: center;
+  /* margin-top: auto; */
+  height: 100%;
+  text-align: center;
+  justify-content: center;
 
-    color: #fff;
+  color: #fff;
 
-    z-index: 10;
+  z-index: 10;
 }
 
 .hero-content .container {
-    --gap: 2rem;
-    padding-top: 7rem;
+  --gap: 2rem;
+  padding-top: 7rem;
 }
 
 .hero-names {
-    line-height: 1.4;
+  line-height: 1.4;
 }
 
 .hero-names span {
-    display: block;
-    text-transform: uppercase;
+  display: block;
+  text-transform: uppercase;
 }
 
 .hero-content .btn {
-    align-self: flex-start;
-    margin-inline: auto;
+  align-self: flex-start;
+  margin-inline: auto;
 }
-
-
 
 /* Our Story */
 
 .our-story {
-    background-color: #FAF0F0;
+  background-color: #faf0f0;
 }
 
 .our-story__header {
-    text-align: center;
-    padding-top: 4rem;
-    padding-bottom: 2rem;
-    position: relative;
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  position: relative;
 }
 
 .our-story__header img {
-    width: 15rem;
-    margin-inline: auto;
+  width: 15rem;
+  margin-inline: auto;
 }
 
 .our-story__heading-title {
-    position: absolute;
-    top: 48%;
-    left: 50%;
-    transform: translate(-50%);
-    font-size: 1.2rem;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 1.2rem;
 }
 
 .our-story__content {
-    --gap: 1.5rem;
-    text-align: center;
-    max-width: 60rem;
-    width: 100%;
-    margin-inline: auto;
-    font-weight: 300;
-    font-size: 1.125rem;
-
+  --gap: 1.5rem;
+  text-align: center;
+  max-width: 60rem;
+  width: 100%;
+  margin-inline: auto;
+  font-weight: 300;
+  font-size: 1.125rem;
 }
 
 .our-story__img {
-    margin-top: 5rem;
+  margin-top: 5rem;
 }
 
 .our-story__arrow {
-    display: flex;
-    justify-content: center;
-    padding-block: 2rem;
+  display: flex;
+  justify-content: center;
+  padding-block: 2rem;
 }
 
 .our-story__videosmall {
-    flex-direction: row;
+  flex-direction: row;
 }
 
 /* Yes Section */
 
 .yes {
-    padding-block: 2rem;
-    justify-content: center;
-    align-items: center;
-    margin-inline: auto;
-    flex-direction: column-reverse;
+  padding-block: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  flex-direction: column-reverse;
 }
 
 .yes__content {
-    background-color: #fff;
-    max-width: 40rem;
-    width: 100%;
-    flex-direction: column-reverse;
-    gap: 0;
+  background-color: #fff;
+  max-width: 40rem;
+  width: 100%;
+  flex-direction: column-reverse;
+  gap: 0;
 }
 
 .yes__quote {
-    max-width: 20rem;
-    font-size: 0.85rem;
-    font-style: italic;
-    font-weight: 300;
+  max-width: 20rem;
+  font-size: 0.85rem;
+  font-style: italic;
+  font-weight: 300;
 }
 
 .yes__title {
-    --gap: 0.5rem;
-    text-transform: uppercase;
-    font-weight: normal;
+  --gap: 0.5rem;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 
 .flower {
-    width: 20rem;
+  width: 20rem;
 }
 
 .yes__content-main {
-    padding-inline: 5rem;
-    padding-block: 3rem;
-    text-align: center;
+  padding-inline: 5rem;
+  padding-block: 3rem;
+  text-align: center;
 }
 
 .yes__img {
-    width: 100%;
-    height: 18rem;
-    border: 20px solid #B0152E;
+  width: 100%;
+  height: 18rem;
+  border: 20px solid #b0152e;
 
-    background-image: url('./images/said-yes.jpeg');
-    background-size: cover;
-    background-position: top center;
- }
+  background-image: url("./images/said-yes.jpeg");
+  background-size: cover;
+  background-position: top center;
+}
 
- /************ Meet *****************/
+/************ Meet *****************/
 
- .meet {
-     padding-block: 2rem;
-     background-color:   #FAF0F0;
+.meet {
+  padding-block: 2rem;
+  background-color: #faf0f0;
 
-    background-image: url('../images/big-flower.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left center;
+  background-image: url("../images/big-flower.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left center;
+}
 
- }
+.meet__header {
+  text-align: center;
+  padding-block: 5rem;
+}
 
- .meet__header {
-     text-align: center;
-     padding-block: 5rem;
- }
+.meet__bride-content {
+  background-color: #fff;
+  padding: 3rem;
+}
 
- .meet__bride-content {
-     background-color: #fff;
-     padding: 3rem;
- }
+.meet__groom {
+  margin-top: 5rem;
+}
 
- .meet__groom {
-     margin-top: 5rem;
- }
-
- .meet__groom-content {
-     background-color: #fff;
-     padding: 3rem;
- }
-
+.meet__groom-content {
+  background-color: #fff;
+  padding: 3rem;
+}
 
 /************ donate-section ***************/
 
 .donate-section {
-    background-color: #fff;
-    padding-block: 6rem;
-    font-style: normal;
+  background-color: #fff;
+  padding-block: 6rem;
+  font-style: normal;
 }
 
 .donate {
-    background-color: #FAF0F0;
-    padding: 4rem;
-    text-align: center;
+  background-color: #faf0f0;
+  padding: 4rem;
+  text-align: center;
 
-    background-image: url("./images/flower2.png");
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-size: auto;
+  background-image: url("./images/flower2.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: auto;
 }
 
 .donate__subtitle {
-    margin-top: 2rem;
-    font-size: 1.1rem;
-    font-weight: 300;
-    text-align: center;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  font-weight: 300;
+  text-align: center;
 }
 
 .donate-details {
-    margin-top: 5rem;
-    gap: 2rem;
+  margin-top: 5rem;
+  gap: 2rem;
 }
 
 .donate__option {
-    margin-top: 3rem;
+  margin-top: 3rem;
 }
 
 .donate .btn {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 /************ Venue Section ***********/
 
 .venue-section,
 .reception-section {
-    padding-block: 2rem;
-    background-color: #fff;
-    background-color: rgba(115, 170, 215, 0.19);
+  padding-block: 2rem;
+  background-color: #fff;
+  background-color: rgba(115, 170, 215, 0.19);
 }
 
 .venue-section {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
 .venue-section .container {
-    flex-direction: column-reverse;
+  flex-direction: column-reverse;
 }
 
 .venue__content,
 .reception__content {
-    text-align: center;
-    margin-inline: auto;
+  text-align: center;
+  margin-inline: auto;
 }
-
-
 
 .venue__img,
 .reception__img {
-    border: none;
-
+  border: none;
 }
 
 /************ Wedding Section ***********/
 
 .wedding-crew {
-    padding-block: 4rem;
-    background: linear-gradient(181.13deg, #FEFCFE 0.96%, #F8E6FF 94.86%);
+  padding-block: 4rem;
+  background: linear-gradient(181.13deg, #fefcfe 0.96%, #f8e6ff 94.86%);
 }
 
 .wedding-crew .container {
-    align-items: center;
-    text-align: center;
+  align-items: center;
+  text-align: center;
 }
 
 .wedding-crew span {
-    display: block;
-    font-weight: bold;
+  display: block;
+  font-weight: bold;
 }
 
 .wedding-flower {
-    position: absolute;
-    right: 0;
-    opacity: 0.2;
+  position: absolute;
+  right: 0;
+  opacity: 0.2;
 }
 
 /************ Organising Section ***********/
 
 .organising-crew {
-    background: #F3D8FC;
-    padding-block: 8rem;
+  background: #f3d8fc;
+  padding-block: 8rem;
 
-    background-image: url("./images/flower4.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
+  background-image: url("./images/flower4.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
 }
 
 .organising-crew .container {
-    margin-top: 3rem;
+  margin-top: 3rem;
 }
 
 .organising-list > div {
-    text-align: center;
-    background-color: rgba(255,255,255,0.3);
-    padding: 2rem;
-    border-radius: 5px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 2rem;
+  border-radius: 5px;
 }
-
 
 /********** Memories **************/
 
 .memories {
-    padding-block: 4rem;
-    background-color: #fff;
+  padding-block: 4rem;
+  background-color: #fff;
 }
 
 .memories-list {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .memories-list > div {
-    margin-inline: auto;
+  margin-inline: auto;
 }
 
 .toast {
-    background-color:  #F0E4F3;
-    background-image: url('./images/flower6.png');
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
+  background-color: #f0e4f3;
+  background-image: url("./images/flower6.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
 }
 
 .toast .container {
-    padding-block: 7rem;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  padding-block: 7rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .toast h2 {
-    font-family: 'Sacramento', cursive;
-    font-size: 2rem;
+  font-family: "Sacramento", cursive;
+  font-size: 2rem;
 }
 
 .toast p {
-    max-width: 30rem;
-    width: 100%;
+  max-width: 30rem;
+  width: 100%;
 }
 
-
 .footer {
-    background-color: #B0152E;
-
+  background-color: #b0152e;
 }
 
 .footer .container {
-    padding-block: 2rem;
-    color: #fff;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
+  padding-block: 2rem;
+  color: #fff;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
 .footer p {
-    font-size: 0.95rem;
+  font-size: 0.95rem;
 }
 
 .footer a {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-@media(min-width: 50em) {
+@media (min-width: 50em) {
+  .hero-names-m {
+    margin-left: 10rem;
+  }
 
-    .hero-names-m {
-        margin-left: 10rem;
-    }
+  /********** Our Story  *************/
 
-    /********** Our Story  *************/
+  .our-story__img {
+    justify-content: center;
+    align-items: center;
+  }
 
-    .our-story__img {
-        justify-content: center;
-        align-items: center;
-    }
+  .our-story__images {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
 
-    .our-story__images {
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-    }
+  .our-story__video {
+    width: 60%;
+  }
 
-   .our-story__video {
-        width: 60%;
-    }
+  .our-story__videosmall {
+    width: 30%;
+    flex-direction: column;
+  }
 
-    .our-story__videosmall {
-        width: 30%;
-        flex-direction: column;
-    }
+  .yes {
+    flex-direction: row;
+    transform: translateX(10%);
+  }
 
-    .yes {
-        flex-direction: row;
-        transform: translateX(10%);
-       
-    }
+  .yes__content-main {
+    text-align: left;
+  }
 
-    .yes__content-main {
-        text-align: left;
-    }
+  .yes__quote {
+    margin-left: 1.2rem;
+  }
 
-    .yes__quote {
-        margin-left: 1.2rem;
-    }
+  .yes__content-main p:last-child {
+    align-self: center;
+    font-size: 0.8rem;
+  }
 
-    .yes__content-main p:last-child {
-        align-self: center;
-        font-size: 0.8rem;
-    }
+  .yes__content {
+    flex-direction: column;
+    gap: 0;
+  }
 
-    .yes__content  {
-        flex-direction: column;
-        gap: 0;
-    }
+  .yes__img {
+    width: 25rem;
+    height: 18rem;
 
-    .yes__img {
-       width: 25rem;
-       height: 18rem;
+    transform: translateX(-50%);
+  }
 
-       transform: translateX(-50%);
-    }
+  /********* Meet Section *************/
 
-    /********* Meet Section *************/
+  .meet__bride,
+  .meet__groom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
 
-    .meet__bride,
-    .meet__groom {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-        justify-content: space-between;
-        gap: 2rem;
-    }
-  
-    /******** Donate Section ***********/
+  /******** Donate Section ***********/
 
-    .donate-details {
-        flex-direction: row;
-        justify-content: space-around;
-    }
+  .donate-details {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 
-    .donate__subtitle {
-        max-width: 50rem;
-        margin-inline: auto;
-    }
+  .donate__subtitle {
+    max-width: 50rem;
+    margin-inline: auto;
+  }
 
-    /* Venue Section */
+  /* Venue Section */
 
-    .venue-section .container,
-    .reception-section .container {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
+  .venue-section .container,
+  .reception-section .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-    .venue-section,
-    .reception-section {
-        padding-block: 2rem;
-        background-color: #fff;
-    }
+  .venue-section,
+  .reception-section {
+    padding-block: 2rem;
+    background-color: #fff;
+  }
 
-    .venue-section {
-        margin-bottom: 0;
-    }
+  .venue-section {
+    margin-bottom: 0;
+  }
 
-    .venue__img,
-    .reception__img {
-    border: 2rem solid #73AAD730;
+  .venue__img,
+  .reception__img {
+    border: 2rem solid #73aad730;
+  }
 
-}
+  /* Wedding Crew */
 
-    /* Wedding Crew */
+  .wedding-crew .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
 
-    .wedding-crew .container {
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-    }
+  .wedding-flower {
+    display: block;
+    position: static;
+    opacity: 1;
+  }
 
-    .wedding-flower {
-        display: block;
-        position: static;
-        opacity: 1;
-    }
+  /* Organising Crew */
 
-    /* Organising Crew */
+  .organising-crew {
+    background-position: 120px 0;
+    background-size: 60%;
+  }
 
-    .organising-crew {
-        background-position: 120px 0;
-        background-size: 60%;
-    }
+  .organising-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    gap: 4rem;
+  }
 
-    .organising-list {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        justify-content: space-between;
-        gap: 4rem;
-    }
+  /* Memories */
 
+  .memories-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-    /* Memories */
+  /* Toast Section */
 
-    .memories-list {
-        grid-template-columns: repeat(3, 1fr);
-
-    }
-
-    /* Toast Section */
-
-    .toast {
-        background-image: url('./images/flower5.png');
-        background-repeat: no-repeat;
-        background-position: 10px 50px;
-        background-size: cover;
-    }
-
+  .toast {
+    background-image: url("./images/flower5.png");
+    background-repeat: no-repeat;
+    background-position: 10px 50px;
+    background-size: cover;
+  }
 }
