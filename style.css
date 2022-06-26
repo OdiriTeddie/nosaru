@@ -368,7 +368,7 @@ button {
 
 .small-pic {
   width: 204px;
-  height: 170px;
+  height: 160px;
   object-fit: cover;
 }
 /* Yes Section */
@@ -653,10 +653,6 @@ button {
     justify-content: center;
     gap: 1.5rem;
   }
-
-  /* .our-story__video {
-    width: 60%;
-  } */
 
 .pop-video video {
   width: 700px;
